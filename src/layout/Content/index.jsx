@@ -1,11 +1,26 @@
-const Content = () => {
-	return (
-		<div>
-			<div className="bg-indigo-50 h-screen w-full pr-64 pt-16 top-0 left-0 fixed ">
-				<div className="p-2 h-full w-full">content</div>
+import { Route, Routes } from "react-router";
+import Users from "../../pages/users";
+import Posts from "../../pages/posts";
+import Comments from "../../pages/comments/Comments";
+import Tasks from "../../pages/tasks";
+import Gallery from "../../pages/gallery";
+
+
+const Content = () => (
+	<div>
+		<div className="bg-indigo-50 h-screen w-full pr-64 pt-16 top-0 left-0 fixed ">
+			<div className="p-4 h-full w-full">
+				<Routes>
+					<Route path="/users" element={<Users />}></Route>
+					<Route path="/posts" element={<Posts/>}></Route>
+					<Route path="/comments" element={<Comments/>}></Route>
+					<Route path="/tasks" element={<Tasks/>}></Route>
+					<Route path="/gallery" element={<Gallery/>}></Route>
+				</Routes>
+
 			</div>
 		</div>
-	);
-};
+	</div>
+);
 
 export default Content;

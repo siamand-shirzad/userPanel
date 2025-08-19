@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router';
+import SidebarItem from './SidebarItem';
 
 const Sidebar = () => {
 	return (
@@ -16,21 +18,11 @@ const Sidebar = () => {
 				{/* bottom content */}
 				<div className="flex flex-col gap-4 flex-1 p-4 rounded-b-lg bg-blue-200">
 					<ul className="">
-						<li className="p-2 rounded hover:bg-blue-100">
-							<p>کاربران</p>
-						</li>
-						<li className="p-2 rounded hover:bg-blue-100">
-							<p>پست ها </p>
-						</li>
-						<li className="p-2 rounded hover:bg-blue-100">
-							<p>کامنت ها</p>
-						</li>
-						<li className="p-2 rounded hover:bg-blue-100">
-							<p>تسک ها</p>
-						</li>
-						<li className="p-2 rounded hover:bg-blue-100">
-							<p>گالری</p>
-						</li>
+						<SidebarItem to="/users">کاربران</SidebarItem>
+						<SidebarItem to="/posts">پست ها</SidebarItem>
+						<SidebarItem to="/comments">کامنت ها</SidebarItem>
+						<SidebarItem to="/tasks">تسک ها</SidebarItem>
+						<SidebarItem to="/gallery">گالری</SidebarItem>
 					</ul>
 				</div>
 			</div>
