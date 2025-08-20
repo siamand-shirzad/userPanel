@@ -4,7 +4,7 @@ import Sidebar from "./layout/sidebar";
 
 const App = () => {
   return (
-    <div>
+    <div >
       <Content/>
       <Header/>
       <Sidebar/>

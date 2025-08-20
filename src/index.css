@@ -10,3 +10,6 @@
   direction: rtl;
   text-align: right;
 }
+button:hover{
+  cursor: pointer;
+}
