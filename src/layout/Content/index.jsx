@@ -4,6 +4,7 @@ import Posts from "../../pages/posts";
 import Comments from "../../pages/comments/Comments";
 import Tasks from "../../pages/tasks";
 import Gallery from "../../pages/gallery";
+import AddUserPage from "../../pages/users/add-user";
 
 
 		const Content = () => (
@@ -12,6 +13,7 @@ import Gallery from "../../pages/gallery";
 			<div className="p-4 h-full w-full">
 				<Routes>
 					<Route path="/users" element={<Users />}></Route>
+					<Route path="/users/add" element={<AddUserPage/>}></Route>
 					<Route path="/posts" element={<Posts/>}></Route>
 					<Route path="/comments" element={<Comments/>}></Route>
 					<Route path="/tasks" element={<Tasks/>}></Route>
