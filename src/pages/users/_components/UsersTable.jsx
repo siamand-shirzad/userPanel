@@ -1,6 +1,7 @@
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { Link } from "react-router";
 
-const UsersTable = ({users}) => {
+const UsersTable = ({users ,handleDelete}) => {
 	return (
 		<div className="flex items-center justify-center rounded-2xl overflow-hidden">
 			<table className="table-auto text-sm w-full text-center">
@@ -23,10 +24,10 @@ const UsersTable = ({users}) => {
 							<td className="px-4 py-2">{user.phone}</td>
 							<td className="px-4 py-2">{user.website}</td>
 							<td className="px-4 py-2 flex gap-2 ">
-								<button className="bg-blue-400 text-white rounded p-4 py-2 flex items-center ">
+								<Link to={`/users/edit/${user.id}`} className="bg-blue-400 text-white rounded p-4 py-2 flex items-center " state={{user}}>
 									<FaEdit />
-								</button>
-								<button className="bg-red-400 text-white rounded p-4 py-2 flex items-center">
+								</Link>
+								<button onClick={()=>handleDelete(user.id)} className="bg-red-400 text-white rounded p-4 py-2 flex items-center">
 									<FaTrash />
 								</button>
 							</td>

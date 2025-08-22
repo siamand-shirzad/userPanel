@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getUsers } from '../../services/users';
+import { deleteUserService, getUsers } from '../../services/users';
 import {  FaUserPlus } from 'react-icons/fa';
 import UsersTable from './_components/UsersTable';
 import { Link } from 'react-router';
@@ -18,6 +18,14 @@ const Users = () => {
   useEffect(()=>{
     handleGetUsers()
   },[])
+	const handleDelete = async (id) => {
+		const res = await deleteUserService(id)		
+		if (res.status ===200 ) {
+			console.log(res.status);
+			alert("عملیات با موفقیت انجام شد")
+			setUsers(users.filter(user=> user.id!==id))
+		}
+	}
 	return (
 		<div className='space-y-4'>
 			<div className='flex justify-between items-center'>
@@ -27,7 +35,7 @@ const Users = () => {
 					<span>افزودن کابر</span>
 				</Link>
 			</div>
-			<UsersTable users={users}/>
+			<UsersTable users={users} handleDelete={handleDelete}/>
 
 		</div>
 	);

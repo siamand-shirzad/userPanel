@@ -14,6 +14,7 @@ import AddUserPage from "../../pages/users/add-user";
 				<Routes>
 					<Route path="/users" element={<Users />}></Route>
 					<Route path="/users/add" element={<AddUserPage/>}></Route>
+					<Route path="/users/edit/:id" element={<AddUserPage/>}></Route>
 					<Route path="/posts" element={<Posts/>}></Route>
 					<Route path="/comments" element={<Comments/>}></Route>
 					<Route path="/tasks" element={<Tasks/>}></Route>
