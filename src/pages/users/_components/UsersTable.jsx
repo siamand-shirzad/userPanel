@@ -5,7 +5,7 @@ const UsersTable = ({users ,handleDelete}) => {
 	return (
 		<div className="flex items-center justify-center rounded-2xl overflow-hidden">
 			<table className="table-auto text-sm w-full text-center">
-				<thead className="bg-blue-400">
+				<thead className="bg-indigo-400">
 					<tr>
 						<th className="px-4 py-2">#</th>
 						<th className="px-4 py-2">نام</th>

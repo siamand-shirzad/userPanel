@@ -30,7 +30,7 @@ const Users = () => {
 		<div className='space-y-4'>
 			<div className='flex justify-between items-center'>
 				<h1 className="font-bold text-2xl">مدیریت کاربران</h1>
-				<Link to="/users/add" className='bg-blue-400 rounded flex items-center gap-2 text-white p-2 hover:cursor-pointer hover:bg-blue-500'>
+				<Link to="/users/add" className='bg-indigo-500 rounded flex items-center gap-2 text-white p-2 hover:cursor-pointer hover:bg-indigo-700 transition-colors duration-150'>
 					<FaUserPlus/>
 					<span>افزودن کابر</span>
 				</Link>
