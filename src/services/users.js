@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+// users section
 export const getUsers = async () => {
 	const response = await axios.get('https://jsonplaceholder.typicode.com/users');
 	return response.data;
@@ -25,4 +25,9 @@ export const updateUserService = async (id, data) => {
 
 export const deleteUserService = async id => {
 	return axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+};
+// post section
+export const getPosts = async () => {
+	const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+	return response.data;
 };
