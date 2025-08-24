@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { deletePostService, getPosts } from '../../services/users';
 import PostsSection from './_components/PostsSection';
+import {  FaRegEdit } from 'react-icons/fa';
 
 const Posts = () => {
 	const [posts, setPosts] = useState([]);
-	const [toEdit, setToEdit] = useState(false);
 
 	const handleGetPosts = async () => {
 		try {
@@ -28,15 +28,16 @@ const Posts = () => {
 	return (
 		<div className="space-y-4">
 			<div className="flex items-center justify-between">
-				<h1 className="font-bold text-3xl">پست ها</h1>
+				<h1 className="font-bold text-2xl">ویرایش پست</h1>
 				<button
-					className="px-2 py-4 bg-indigo-300 rounded-lg text-sm font-bold"
-					onClick={() => setToEdit(toEdit ? false : true)}>
-					{toEdit ? 'نمایش پست ها' : 'ویرایش پست ها'}
+					className=" bg-indigo-500  flex items-center gap-2 text-white p-2  hover:bg-indigo-700 transition-colors duration-150 rounded text-sm "
+					>
+					<FaRegEdit />
+					<span>ویرایش</span>
 				</button>
 			</div>
 			<div className="">
-				<PostsSection posts={posts} toEdit={toEdit} handleDelete={handleDelete} />
+				<PostsSection posts={posts}  handleDelete={handleDelete} />
 			</div>
 		</div>
 	);
