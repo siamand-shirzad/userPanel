@@ -1,24 +1,23 @@
 import {  FaPlus } from "react-icons/fa6";
 import { MdDeleteForever, MdEdit } from "react-icons/md";
 import { RiMore2Fill } from "react-icons/ri";
+import { Link } from "react-router";
 
-const Tooltip = ({handleDelete, id}) => {
+const Tooltip = ({handleDelete, id ,post}) => {
   return (
     <div className="group/btn">
       <div className="absolute motion-safe:animate-pulse hidden transition-transform ease-in-out shadow-lg shadow-gray-400/35 group-hover/btn:flex group-hover/btn:-translate-y-20   bg-gray-100 p-3 rounded-3xl">
         <div className="tooltip-container flex items-center justify-center gap-3">
-          <div className="group/tooltip p-2 bg-gray-50 rounded-full shadow-md shadow-gray-200 hover:bg-gray-700 hover:text-gray-50">
+          <Link to={"/posts/add"} className="group/tooltip p-2 bg-gray-50 rounded-full shadow-md shadow-gray-200 hover:bg-gray-700 hover:text-gray-50">
             <span className="sr-only">add</span>
-            <a href="#">
               <span className="">
                 <FaPlus className="fill-gray-700 group-hover/tooltip:fill-gray-50 ease-in-out duration-300 transition-colors w-[26px] h-[26px]"/>
               </span>
-            </a>
-          </div>
-          <div className="bg-gray-50 shadow-md shadow-gray-200 group/tooltip p-2 rounded-full hover:bg-sky-500 hover:text-gray-50">
+          </Link>
+          <Link to={"/posts/add"} state={{post}} className="bg-gray-50 shadow-md shadow-gray-200 group/tooltip p-2 rounded-full hover:bg-sky-500 hover:text-gray-50">
             <span className="sr-only">edit</span>
             <MdEdit className="fill-gray-700 group-hover/tooltip:fill-gray-50 ease-in-out duration-300 transition-colors w-[26px] h-[26px]" />
-          </div>
+          </Link>
           <button onClick={()=>handleDelete(id)} className="bg-gray-50 shadow-md shadow-gray-200 group/tooltip p-2 rounded-full hover:bg-red-500 hover:text-gray-50">
             <span className="sr-only">delete</span>
             <MdDeleteForever className="fill-gray-700 group-hover/tooltip:fill-gray-50 ease-in-out duration-300 transition-colors w-[26px] h-[26px]"/>

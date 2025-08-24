@@ -26,7 +26,9 @@ export const updateUserService = async (id, data) => {
 export const deleteUserService = async id => {
 	return axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
 };
+
 // post section
+
 export const getPosts = async () => {
 	const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
 	return response.data;
@@ -35,3 +37,19 @@ export const deletePostService = async id => {
 	return axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
 };
 
+export const createPostService = async (data) => {
+	return axios({
+		url: 'https://jsonplaceholder.typicode.com/posts',
+		method: 'POST',
+		data,
+		headers: { 'Content-type': 'application/json; charset=UTF-8' }
+	});
+};
+export const updatePostService = async (id, data) => {
+	return axios({
+		url: `https://jsonplaceholder.typicode.com/posts/${id}`,
+		method: 'PUT',
+		data,
+		headers: { 'Content-type': 'application/json; charset=UTF-8' }
+	});
+};
