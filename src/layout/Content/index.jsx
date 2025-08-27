@@ -10,7 +10,7 @@ import AddPost from "../../pages/posts/add-posts";
 
 		const Content = () => (
 <div>
-		<div className="bg-indigo-50 min-h-screen w-full pr-64 pt-16 top-0 left-0  ">
+		<div className="bg-indigo-50 min-h-screen w-full pr-64 pt-16 top-0 left-0 dark:bg-gray-900 ">
 			<div className="p-4 h-full w-full">
 				<Routes>
 					<Route path="/users" element={<Users />}></Route>

@@ -96,13 +96,13 @@ export default function AddUserPage() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <h1 className="text-2xl font-bold text-center mb-4 text-gray-800">{userToEdit ? "ویرایش کاربر ":"افزودن کاربر"}</h1>
+    <div className="max-w-2xl mx-auto p-4 ">
+      <h1 className="text-2xl font-bold text-center mb-4 dark:text-gray-100 text-gray-800">{userToEdit ? "ویرایش کاربر ":"افزودن کاربر"}</h1>
 
-      <form onSubmit={handleSubmit} className="bg-white shadow-lg rounded-lg p-6">
+      <form onSubmit={handleSubmit} className="bg-white shadow-lg rounded-lg p-6 dark:bg-gray-800 ">
         {fields.map((field, i) => (
           <div key={field.name} className="mb-4">
-            <label htmlFor={field.name} className="block text-gray-700 font-medium mb-2">
+            <label htmlFor={field.name} className="block text-gray-700 dark:text-gray-200 font-medium mb-2">
               {field.label}
             </label>
             <input

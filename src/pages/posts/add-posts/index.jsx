@@ -31,12 +31,12 @@ const AddPost = () => {
 	};
 	return (
 		<div className=" flex flex-col items-center justify-center">
-			<h1 className='my-4 font-bold text-2xl text-gray-800'>{postToEdit? 'ویرایش پست' :'افزودن پست' }</h1>
+			<h1 className='my-4 font-bold text-2xl dark:text-gray-200 text-gray-800'>{postToEdit? 'ویرایش پست' :'افزودن پست' }</h1>
 			<form
 				onSubmit={handleSubmit}
-				className="bg-white w-[90vw] md:w-[50vw] p-6 rounded-lg shadow-md">
+				className="bg-white dark:bg-gray-800 w-[90vw] md:w-[50vw] p-6 rounded-lg shadow-md">
 				<div className="mb-4">
-					<label htmlFor="title" className="block text-gray-700 text-lg font-bold mb-2">
+					<label htmlFor="title" className="block dark:text-gray-200 text-gray-700 text-lg font-bold mb-2">
 						عنوان
 					</label>
 					<input
@@ -50,7 +50,7 @@ const AddPost = () => {
 					/>
 				</div>
 				<div className="mb-4">
-					<label htmlFor="body" className="block text-gray-700 text-sm font-bold mb-2">
+					<label htmlFor="body" className="block dark:text-gray-200 text-gray-700 text-sm font-bold mb-2">
 						مطلب
 					</label>
 					<textarea
