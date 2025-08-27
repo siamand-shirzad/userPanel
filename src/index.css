@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
   font-family: shabnam;
@@ -10,6 +11,9 @@
   direction: rtl;
   text-align: right;
 }
-button:hover{
-  cursor: pointer;
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
 }
